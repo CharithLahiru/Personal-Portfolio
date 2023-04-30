@@ -11,7 +11,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("/img/space.jpg");
+  background-image: url("/img/Space.jpg");
   width: 99.2vw;
   height: 100vh;
   z-index: -1;
@@ -35,7 +35,7 @@ header{
   top: 0;
   left: 0;
   position: fixed;
-  background-image: url("/img/sky.jpg");
+  background-image: url("/img/Sky.jpg");
   background-position: center;
   width: 100vw;
   height: 100vh;
