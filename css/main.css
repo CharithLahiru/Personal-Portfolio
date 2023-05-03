@@ -1,22 +1,95 @@
 :root{
   --green: #64ffda;
+  scroll-snap-type: block proximity;
 }
 body{
   font-family: 'Space Mono';
-  font-size: 24px;
+  font-size: 20px;
   color: var(--green);
+
 
 }
 .background-image{
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Space.jpg");
+  /*background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Space.jpg");*/
+  background-image: url("/img/Space .jpg");
   width: 99.2vw;
   height: 100vh;
   z-index: -1;
+  scroll-snap-align: start;
+}
+.background-image:nth-child(2){
+  top: 100vh;
+  width: calc(90vw - 100px);
+  background-image: none;
 }
 
+#name{
+  animation-name: name;
+  animation-duration: 5s;
+}
+@keyframes name {
+  from{
+    transform: translatey(50vh);
+    font-size: 10vw;
+    font-weight: bold;
+    font-family: Audiowide, sans-serif;
+  }
+  50%{
+    /*font-size: 200px;*/
+
+  }
+  to{
+    font-family: Audiowide, sans-serif;
+  }
+}
+
+#top-menu{
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(10, 21, 40, 0.89);
+  border-bottom: 2px solid lawngreen;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top-menu>div{
+  display: flex;
+  min-width: 60vw;
+  justify-content: space-between;
+}
+#Resume{
+  animation-name: hilight;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes hilight {
+  40%{
+    scale: 1;
+  }
+  45%{
+    scale: 1.2;
+    transform: rotate(0deg);
+  }
+  47.5%{
+    transform: rotate(10deg);
+  }
+  52.5%{
+    transform: rotate(-10deg);
+  }
+  55%{
+    scale: 1.2;
+    transform: rotate(0deg);
+  }
+  60%{
+    scale: 1;
+  }
+}
 
 #main-body{
   margin-top: -1000px;
@@ -35,7 +108,10 @@ header{
   top: 0;
   left: 0;
   position: fixed;
-  background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Sky.jpg");
+  /*background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Sky.jpg");*/
+  background-image: url("/img/Sky .jpg");
+  background-color: #0A192F;
+  opacity: 0.9;
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -79,7 +155,8 @@ menu{
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: rgba(22, 211, 64, 0.91);
+  /*background-color: rgba(22, 211, 64, 0.91);*/
+  z-index: 3;
 
 }
 menu>span>a>svg{
@@ -88,8 +165,13 @@ menu>span>a>svg{
 }
 menu>span>a>svg:hover{
   transform: scale(1.5);
+  transition-duration: 500ms;
 }
-
+menu>div{
+  width: 1px;
+  height: 20vh;
+  background-color: lawngreen;
+}
 
 
 #img-coder{
@@ -228,7 +310,7 @@ footer>div{
   width: 50vw;
   max-width: 700px;
   text-align: center;
-  background-color: #090915;
+  /*background-color: #090915;*/
   opacity: .7;
 }
 footer>div>div:nth-child(1){
