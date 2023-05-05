@@ -6,9 +6,8 @@ body{
   font-family: 'Space Mono';
   font-size: 20px;
   color: var(--green);
-
-
 }
+
 .background-image{
   position: absolute;
   top: 0;
@@ -28,7 +27,7 @@ body{
 
 #name{
   animation-name: name;
-  animation-duration: 5s;
+  animation-duration: 6s;
 }
 @keyframes name {
   from{
@@ -37,9 +36,11 @@ body{
     font-weight: bold;
     font-family: Audiowide, sans-serif;
   }
-  50%{
-    /*font-size: 200px;*/
-
+  15%{
+    transform: translatey(50vh);
+    font-size: 10vw;
+    font-weight: bold;
+    font-family: Audiowide, sans-serif;
   }
   to{
     font-family: Audiowide, sans-serif;
@@ -66,7 +67,26 @@ body{
   animation-name: hilight;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-
+  border: 2px solid lawngreen;
+  background-color: rgba(10, 21, 40, 0.89);
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 5px lawngreen;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-delay: 20ms;
+  animation-timing-function: ease-in-out;
+}
+#Resume>a{
+  color: lawngreen;
+  text-decoration: none;
+}
+#Resume:hover{
+  background-color: lawngreen;
+}
+#Resume>a:hover{
+  color: rgba(10, 21, 40, 0.89);
+  /*text-shadow: 0 0 5px rgba(10, 21, 40, 0.89);*/
+  font-weight: bold;
 }
 @keyframes hilight {
   40%{
@@ -164,7 +184,7 @@ menu>span>a>svg{
   height: 60px;
 }
 menu>span>a>svg:hover{
-  transform: scale(1.5);
+  transform: scale(1.3);
   transition-duration: 500ms;
 }
 menu>div{
@@ -229,19 +249,25 @@ menu>div{
 }
 .slide-left{
   animation-name: slider-left;
-  animation-duration: 4s;
+  animation-duration: 7s;
 }
 @keyframes slider-left {
   from{
     transform: translateX(-100vw);
   }
+  50%{
+    transform: translateX(-100vw);
+  }
 }
 .slide-right{
   animation-name: slider-right;
-  animation-duration: 4s;
+  animation-duration: 7s;
 }
 @keyframes slider-right {
   from{
+    transform: translateX(100vw);
+  }
+  50%{
     transform: translateX(100vw);
   }
 }
