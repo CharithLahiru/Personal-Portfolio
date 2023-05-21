@@ -8,12 +8,15 @@ body {
   font-size: 18px;
   color: var(--green);
 }
+a{
+  color: var(--green);
+}
 
 .background-image {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Space.jpg");
+  /*background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Space.jpg");*/
   /*background-image: url("/img/Space .jpg");*/
   /*width: 99.2vw;*/
   width: 100%;
@@ -33,18 +36,18 @@ body {
   animation-name: name;
   animation-duration: 6s;
   font-size: 1.5rem;
+  width: 100%;
 }
 
 @keyframes name {
   from {
     transform: translatey(50vh);
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: bold;
-    font-family: Audiowide, sans-serif;
   }
   15% {
     transform: translatey(50vh);
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: bold;
     font-family: Audiowide, sans-serif;
   }
@@ -65,10 +68,37 @@ body {
   align-items: center;
 }
 
-#top-menu > div {
+#name {
+  position: absolute;
+  left: 5vw;
+  top: 0;
+  padding: 10px;
+  width: 90vw;
+  text-align: left;
+  height: 100%;
+}
+#top-menu-right {
+  position: absolute;
+  right: 5vw;
+  top: 0;
+  text-align: right;
+  height: 100%;
+  padding: 10px;
+}
+/*#top-menu > div {*/
+/*  display: flex;*/
+/*  width: 90vw;*/
+/*  justify-content: space-between;*/
+/*}*/
+#top-menu-right{
   display: flex;
-  min-width: 60vw;
-  justify-content: space-between;
+}
+#top-menu-right>div{
+  padding: 10px;
+}
+#top-menu-right > div:hover{
+  color: lawngreen;
+  cursor: pointer;
 }
 
 #Resume {
@@ -98,7 +128,7 @@ body {
   color: rgba(10, 21, 40, 0.89);
   /*text-shadow: 0 0 5px rgba(10, 21, 40, 0.89);*/
   font-weight: bold;
-}  /*background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Space.jpg");*/
+}
 
 
 @keyframes hilight {
@@ -139,8 +169,8 @@ header {
   top: 0;
   left: 0;
   position: fixed;
-  background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Sky.jpg");
-  /*background-image: url("/img/Sky .jpg");*/
+  /*background-image: url("https://raw.githubusercontent.com/CharithLahiru/Personal-Portfolio/main/img/Sky.jpg");*/
+  background-image: url("/img/Sky .jpg");
   background-color: #0A192F;
   opacity: 0.9;
   background-position: center;
@@ -152,19 +182,19 @@ header {
   background-size: cover;
 }
 
-header > div:last-child {
-  margin-left: 100px;
-}
+/*header > div:last-child {*/
+/*  margin-left: 20px;*/
+/*}*/
 
-header > div:nth-child(2) {
-  margin-left: 100px;
-}
+/*header > div:nth-child(2) {*/
+/*  margin-left: 20px;*/
+/*}*/
 
 #top-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20vh 100px 0 100px;
+  /*padding: 20vh 10px 0 100px;*/
 }
 
 #my-name {
@@ -173,7 +203,7 @@ header > div:nth-child(2) {
   padding: 80px 20px;
   font-size: 1.7rem;
   margin-left: 50px;
-  width: 300px;
+  /*width: 300px;*/
 }
 
 #my-name > span:nth-child(2) {
@@ -204,9 +234,29 @@ header > div:nth-child(2) {
   display: flex;
   right: -1300px;
   top: 350px;
-  width: 500px;
+  width: 400px;
+  height: 500px;
   padding: 0 100px 0 0;
+  background-image: url('/img/dp.png');
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  border-radius: 50%;
 }
+#img-coder:hover{
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+#img-coder-background{
+  border-radius: 50%;
+  background: linear-gradient(315deg,#3a50b3,#3fdb3a);
+  filter: grayscale(100%);
+  border-radius: 50%; 
+}
+#img-coder-background:hover{
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
 
 
 menu {
@@ -220,15 +270,15 @@ menu {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   gap: 25px;
-  /*background-color: rgba(22, 211, 64, 0.91);*/
   z-index: 3;
 
 }
 
 menu > span > a > svg {
-  width: 2.78rem;
-  height: 2.78rem;
+  width: 1.78rem;
+  height: 1.78rem;
 }
 
 menu > span > a > svg:hover {
@@ -273,7 +323,7 @@ menu > div {
 }
 
 .slide-left {
-  /*animation-name: slider-left;*/
+  animation-name: slider-left;
   animation-duration: 7s;
 }
 
@@ -287,7 +337,7 @@ menu > div {
 }
 
 .slide-right {
-  /*animation-name: slider-right;*/
+  animation-name: slider-right;
   animation-duration: 7s;
 }
 
@@ -346,6 +396,7 @@ menu > div {
 
 #project-container > h2 {
   color: white;
+  text-align: center;
 }
 
 .projects {
@@ -377,11 +428,12 @@ footer > div > div:nth-child(1) {
   color: white;
 }
 
-footer > div > div:nth-child(2) {
+footer > div > div {
   padding-top: 50px;
+  text-shadow:  0 0 20px #c1d1ef;
 }
 
-footer > div > div:nth-child(3) {
+footer > div > div:last-child {
   font-size: 0.8rem;
   padding-top: 100px;
 }
@@ -460,12 +512,8 @@ footer > div > div:nth-child(3) {
 
   #project-container {
     margin: 100px 15vw 0 10vw;
-  }
-
-  #project-container > h2 {
     text-align: center;
   }
-
   .projects {
     color: var(--green);
     width:  100%;
